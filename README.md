@@ -2,9 +2,9 @@
 Angular Imager Viewer is a angular directive for image zoom , image rotate feautured in HTML pages.
 Image Zoom in, Zoom out, Image Rotate left, Image Rotate right options were added in this directive.
 
-## Get The Dashboard
+## Wanna a See a Demo!!!
 
-* [Demo] (http://dashboard.ranjithprabhu.in)
+* [Demo] (https://ranjithprabhuk.github.io/Angular-Image-Viewer/)
 
 * [Download Source]  (https://github.com/ranjithprabhuk/Angular-Image-Viewer/archive/master.zip)
 
@@ -17,6 +17,7 @@ Image Zoom in, Zoom out, Image Rotate left, Image Rotate right options were adde
 
 ## Plugins used
 * Bootstrap for CSS styles and Glyphicons
+* Jquery for Angular jqLite
 
 ## Usage
 * Download and customize the application as per your requirements.
