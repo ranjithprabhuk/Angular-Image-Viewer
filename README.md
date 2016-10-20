@@ -20,7 +20,7 @@ Image Zoom in, Zoom out, Image Rotate left, Image Rotate right options were adde
 * Jquery for Angular jqLite
 
 ## Usage
-* Download and customize the application as per your requirements.
+* Include the angular module imageViewer in your angular application
 
 ## About Author
 * [Author URL] (http://ranjithprabhu.in)
