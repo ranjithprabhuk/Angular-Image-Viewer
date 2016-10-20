@@ -18,10 +18,10 @@ angular.module('imageViewer',[]).directive('imageViewer',function(){
      return {
          restrict: 'EA',
          template:'<div style="padding:10px;">\
-                <button id="girardir" class="btn btn-primary btn-sm" ng-disabled="noImage"><span class="fa fa-rotate-left"> </span> Rotate to Left</button>\
-                <button id="giraresq" class="btn btn-primary btn-sm" ng-disabled="noImage"><span class="fa fa-rotate-right"> </span> Rotate to Right</button>\
-                <button id="zoomIn" class="btn btn-info btn-sm" ng-disabled="noImage"><span class="fa fa-plus"> </span> Zoom</button>\
-                <button id="zoomOut" class="btn btn-info btn-sm" ng-disabled="noImage"><span class="fa fa-minus"> </span> Zoom</button>\
+                <button id="girardir" class="btn btn-primary btn-sm" ng-disabled="noImage"><span class="glyphicon glyphicon-menu-left"> </span> Rotate to Left</button>\
+                <button id="giraresq" class="btn btn-primary btn-sm" ng-disabled="noImage"><span class="glyphicon glyphicon-menu-right"> </span> Rotate to Right</button>\
+                <button id="zoomIn" class="btn btn-info btn-sm" ng-disabled="noImage"><span class="glyphicon glyphicon-zoom-in"> </span> Zoom In</button>\
+                <button id="zoomOut" class="btn btn-info btn-sm" ng-disabled="noImage"><span class="glyphicon glyphicon-zoom-out"> </span> Zoom Out</button>\
                 <button id="carregar" class="btn btn-warning btn-sm" ng-disabled="noImage"><span class="fa fa-arrow-left"> </span> Reset</button>\
                 </div>\
 				<div id="image-zoom" style="padding:10px;">\
