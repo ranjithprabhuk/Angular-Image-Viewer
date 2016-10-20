@@ -63,7 +63,24 @@ angular.module('imageViewer',[]).directive('imageViewer',function(){
 		angular.element('#carregar').click(function () {
 			
 			//check the image load
-			angular.element('#image').on('load',function(){
+			angular.element('#image').on('load',resetImage())
+			
+			//if the image is not loaded 
+			.on('error', function() { 
+				//hide the canvas
+				angular.element('#canvas').hide();
+				
+				//disable the buttons
+				scope.noImage = true;
+				
+				//display the image not loaded text
+				angular.element('#error-message').show();
+				console.log("error loading image"); });
+			
+		});
+		
+		//method to reset the image
+		function resetImage(){
 				//load the  image in canvas if the image is loaded successfully
 				image = document.getElementById('image');
 				element = canvas.getContext("2d");
@@ -79,21 +96,8 @@ angular.module('imageViewer',[]).directive('imageViewer',function(){
 				drawImage();
 				angular.element('#canvas').attr('data-girar', 0);
 				
-				console.log('loaded successfully!!!');})
-			
-			//if the image is not loaded 
-			.on('error', function() { 
-				//hide the canvas
-				angular.element('#canvas').hide();
-				
-				//disable the buttons
-				scope.noImage = true;
-				
-				//display the image not loaded text
-				angular.element('#error-message').show();
-				console.log("error loading image"); });
-			
-		});
+				console.log('loaded successfully!!!');
+		};
 
 		//method to rotate the image in clockwise
 		angular.element('#giraresq').click(function () {
@@ -130,8 +134,8 @@ angular.module('imageViewer',[]).directive('imageViewer',function(){
 			else {
 				// scroll down
 				if(currentScale-zoomDelta - 0.1 > 0){
-				currentScale -= zoomDelta;
-				 drawImage();
+					currentScale -= zoomDelta;
+					drawImage();
 				 }
 			}
 		});
