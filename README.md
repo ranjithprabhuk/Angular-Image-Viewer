@@ -22,6 +22,10 @@ Image Zoom in, Zoom out, Image Rotate left, Image Rotate right options were adde
 ## Usage
 * Include the angular module imageViewer in your angular application
 
+```
+	<image-viewer src="images/demo_image.JPG">
+```
+
 ## About Author
 * [Author URL] (http://ranjithprabhu.in)
 
