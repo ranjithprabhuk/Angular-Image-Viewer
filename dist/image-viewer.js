@@ -87,18 +87,22 @@ angular.module('imageViewer',[]).directive('imageViewer',function(){
 				angleInDegrees = 0;
 				currentScale = 1;
 				currentAngle = 0;
+				
+				//for initial loading
 				if(scope.flag){
 					scope.flag = 0;
 					drawImage();
 					element.translate(canvas.width / 2, canvas.height / 2);
+					setTimeout(function(){
+						angular.element('#canvas').attr('data-girar', 0);
+						drawImage();
+					},1000);
 				}
-				else
+				else{
 					element.translate(0,0);
-				setTimeout(function(){
 					angular.element('#canvas').attr('data-girar', 0);
 					drawImage();
-				},1000);
-				
+				}
 		};
 
 		//method to rotate the image in clockwise
